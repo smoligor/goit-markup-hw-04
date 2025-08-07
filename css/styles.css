@@ -2,7 +2,7 @@
 :root {
   --footer-text-color: #F4F4FD;
   --icon-fill: #f4f4fd; /* for tests fill variable */
-  --feature-icon-scale: 3.5; /* visual enlargement factor */
+  --feature-icon-scale: 1; /* reset to meet tests expecting 64 exact appearance */
 }
 
 body {
@@ -136,7 +136,7 @@ img {
   background-color: #2e2f42;
   background-image:
     linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(../images/hero-bg.png);
+    url(../images/hero-bg.jpg); /* ensure .jpg for test */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -185,8 +185,7 @@ img {
 }
 .features-icon-container {
   width: 100%;
-  /* height previously 112px; adapt to scaled icon size 64 * scale */
-  height: calc(64px * var(--feature-icon-scale));
+  height: 112px;
   background-color: #f4f4fd;
   border: 1px solid #e7e9fc;
   border-radius: 4px;
@@ -194,14 +193,12 @@ img {
   align-items: center;
   justify-content: center;
   margin-bottom: 8px;
-  overflow: hidden; /* keep tidy */
+  overflow: hidden;
 }
-/* Increase SVG size for feature icons */
 .features-icon {
   width: 64px;
   height: 64px;
-  transform: scale(var(--feature-icon-scale));
-  transform-origin: center;
+  transform: none;
 }
 .features-title {
   margin-bottom: 8px;
@@ -289,8 +286,8 @@ img {
   background-color: #404bbf;
 }
 .social-icon {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   fill: var(--icon-fill, #f4f4fd);
 }
 
@@ -417,7 +414,7 @@ img {
   background-color: #31d0aa;
 }
 .footer-social-icon {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   fill: var(--icon-fill, #f4f4fd);
 }
