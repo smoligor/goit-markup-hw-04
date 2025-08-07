@@ -285,10 +285,8 @@ img {
 .social-link:focus {
   background-color: #404bbf;
 }
-/* FIX: Set correct size for team icons */
+/* FIX: Removed width and height from CSS, now controlled by HTML attributes */
 .social-icon {
-  width: 24px;
-  height: 24px;
   fill: var(--icon-fill, #f4f4fd);
 }
 
@@ -417,8 +415,7 @@ img {
   background-color: #31d0aa;
 }
 
+/* FIX: Removed width and height from CSS, now controlled by HTML attributes */
 .footer-social-icon {
-  width: 16px;
-  height: 16px;
   fill: var(--icon-fill, #f4f4fd);
 }
