@@ -1,6 +1,8 @@
 /* ================= GLOBAL STYLES ================= */
 :root {
   --footer-text-color: #F4F4FD;
+  --icon-fill: #f4f4fd; /* for tests fill variable */
+  --feature-icon-scale: 3.5; /* visual enlargement factor */
 }
 
 body {
@@ -134,7 +136,7 @@ img {
   background-color: #2e2f42;
   background-image:
     linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(../images/Main\ Page.jpg);
+    url(../images/hero-bg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -183,7 +185,8 @@ img {
 }
 .features-icon-container {
   width: 100%;
-  height: 112px;
+  /* height previously 112px; adapt to scaled icon size 64 * scale */
+  height: calc(64px * var(--feature-icon-scale));
   background-color: #f4f4fd;
   border: 1px solid #e7e9fc;
   border-radius: 4px;
@@ -191,11 +194,14 @@ img {
   align-items: center;
   justify-content: center;
   margin-bottom: 8px;
+  overflow: hidden; /* keep tidy */
 }
 /* Increase SVG size for feature icons */
 .features-icon {
-  width: 256px;    /* increased from 64px */
-  height: 256;   /* square for easier scaling */
+  width: 64px;
+  height: 64px;
+  transform: scale(var(--feature-icon-scale));
+  transform-origin: center;
 }
 .features-title {
   margin-bottom: 8px;
@@ -283,9 +289,9 @@ img {
   background-color: #404bbf;
 }
 .social-icon {
-  width: 32px;
-  height: 32px;
-  fill: currentColor;
+  width: 24px;
+  height: 24px;
+  fill: var(--icon-fill, #f4f4fd);
 }
 
 /* ================= PORTFOLIO SECTION ================= */
@@ -413,5 +419,5 @@ img {
 .footer-social-icon {
   width: 24px;
   height: 24px;
-  fill: #f4f4fd;
+  fill: var(--icon-fill, #f4f4fd);
 }
