@@ -285,9 +285,10 @@ img {
 .social-link:focus {
   background-color: #404bbf;
 }
-.social-icon, .footer-social-icon {
-  width: 16px; /* This might seem contradictory, but HTML attributes take precedence */
-  height: 16px;
+/* FIX: Set correct size for team icons */
+.social-icon {
+  width: 24px;
+  height: 24px;
   fill: var(--icon-fill, #f4f4fd);
 }
 
@@ -387,8 +388,8 @@ img {
   font-weight: 500;
   font-size: 16px;
   color: #FFFFFF;
-  line-height: 1.5; /* FIX: Added missing property */
-  letter-spacing: 0.02em; /* FIX: Added missing property */
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
 /* Social links (footer) */
@@ -417,6 +418,7 @@ img {
 }
 
 .footer-social-icon {
-    width: 24px;
-    height: 24px;
+  width: 16px;
+  height: 16px;
+  fill: var(--icon-fill, #f4f4fd);
 }
