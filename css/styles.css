@@ -285,9 +285,9 @@ img {
 .social-link:focus {
   background-color: #404bbf;
 }
-.social-icon {
-  width: 16px;
-  height: 16px;
+.social-icon, .footer-social-icon {
+  width: 24px;
+  height: 24px;
   fill: var(--icon-fill, #f4f4fd);
 }
 
@@ -412,9 +412,4 @@ img {
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: #31d0aa;
-}
-.footer-social-icon {
-  width: 16px;
-  height: 16px;
-  fill: var(--icon-fill, #f4f4fd);
 }
