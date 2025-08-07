@@ -220,6 +220,15 @@ img {
     0px 1px 1px rgba(46,47,66,0.16),
     0px 2px 1px rgba(46,47,66,0.08);
 }
+.team-item img {
+  width: 264px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 4px 4px 0 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .team-info {
   padding: 32px 0;
   text-align: center;
@@ -262,8 +271,8 @@ img {
   background-color: #404bbf;
 }
 .social-icon {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   fill: currentColor;
 }
 
