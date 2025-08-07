@@ -187,7 +187,7 @@ img {
   width: 100%;
   height: 112px;
   background-color: #f4f4fd;
-  border: 1px solid #e7e9fc;
+  border: 1px solid #8e8f99; /* FIX: Changed border color */
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -202,7 +202,7 @@ img {
 }
 .features-title {
   margin-bottom: 8px;
-  font-weight: 500;
+  font-weight: 700; /* FIX: Changed font-weight from 500 to 700 */
   font-size: 20px;
   color: #2e2f42;
 }
@@ -210,7 +210,7 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #434455;
+  color: #434343; /* FIX: Changed color from #434455 */
 }
 
 /* ================= TEAM SECTION ================= */
@@ -412,4 +412,10 @@ img {
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: #31d0aa;
+}
+
+/* FIX: Added specific rule for footer icon size */
+.footer-social-icon {
+    width: 24px;
+    height: 24px;
 }
